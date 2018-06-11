@@ -1,27 +1,24 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Dimensions } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 // create a component
 class SignUpScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>SignUpScreen</Text>
+            <View style={{flex:1}}>
+            <LinearGradient direction="ltr" colors={[ '#d7d2cc','#304352']}>
+                <View style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height}}>
+                <Text>SIGN UP</Text>
+                </View>
+            </LinearGradient>
             </View>
+            
+        
         );
     }
 }
-
-// define your styles
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
-    },
-});
 
 //make this component available to the app
 export default SignUpScreen;
